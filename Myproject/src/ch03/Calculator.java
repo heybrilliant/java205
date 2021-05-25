@@ -15,36 +15,48 @@ import java.util.Scanner;
 
 public class Calculator {
 
-	public int plus(int a, int b) {
-		int plus = a + b;
-		return plus;
+	long plus(int a, int b) {
+//		long result = a + b; // int에 넘치는 값 또한 받아주기 위해 long 타입으로 선언
+//		return result;
+		return (long)a + b; // 더 간결한 코드, b는 자동형변환 일어남
 	}
 	
-	public int minus(int a, int b) {
-		int minus = a - b;
-		return minus;
+	long minus(int a, int b) {
+		return (long)a - b;
 	}
 	
-	public int multi(int a, int b) {
-		int multi = a * b;
-		return multi;
+	long multi(int a, int b) {
+		return (long)a * b;
 	}
 	
-	public int div(int a, int b) {
-		int div = a / b;
-		return div;
+	float div(int a, int b) {
+		return (float)a / b; // (float)int / int -> int
 	}
 	
-	public float circle1(float r) {
-		float circle1 = (float) (2 * 3.14 * r);
-		return circle1;
+	// 대문자 이름 -> 대문자 시작 케멀 케이스
+	// 변수 이름 -> 소문자 시작 케멀 케이스 
+	// 상수 이름 -> 모두 대문자 
+	// 안지켜도 에러가 뜨진않지만 클래스와 변수 등을 알아보기위한 암묵적인 약속임
+	
+	double pi = 3.14d;
+	float pi2 = 3.14f;
+	final float PI3= 3.14f; // final : 한번 변수값을 정해두면(한 번 대입한 후) 변하지 않게 함 = 상수로 만든다(상수는 대문자)
+	
+	float circle1(float r) {
+		return 2 * PI3 * r; // int * float * float
 	}
-	public float circle2(float r) {
-		float circle2 = (float) (3.14 * r * r);
-		return circle2;
+	
+	float circle2(float r) {
+		return PI3 * r * r; 
 	}
 	
 	public static void main(String[] args) {
+
+		// Scanner : 자원을 프로그램으로 받아오는 역할 
+		
+
+		Calculator cal = new Calculator();
+		System.out.println(cal.PI3);
 
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("정수 a를 입력하세요.");
@@ -52,15 +64,15 @@ public class Calculator {
 		System.out.println("정수 b를 입력하세요.");
 		int b = scanner.nextInt();
 		
-		Calculator cal = new Calculator();
-		System.out.println(cal.plus(a, b));
-		System.out.println(cal.minus(a, b));
-		System.out.println(cal.multi(a, b));
-		System.out.println(cal.div(a, b));
+		System.out.println(a + " + " + b + " = " + cal.plus(a, b));
+		System.out.println(a + " - " + b + " = " + cal.minus(a, b));
+		System.out.println(a + " * " + b + " = " + cal.multi(a, b));
+		System.out.println(a + " / " + b + " = " + cal.div(a, b));
 
 		System.out.println("반지름 길이 r을 입력하세요.");
-		float r = scanner.nextInt();
-
+		float r = scanner.nextFloat();
+		
+		System.out.println("입력받은 반지름의 길이는 "+ r + "입니다.");
 		System.out.println("반지름이 " + r + "인 원의 둘레는 " + cal.circle1(r) + "입니다.");
 		System.out.println("반지름이 " + r + "인 원의 넓이는 " + cal.circle2(r) + "입니다.");
 
