@@ -1,3 +1,5 @@
+package ch02;
+
 
 public class Calculator {
 	void plus(int n1, int n2) {
