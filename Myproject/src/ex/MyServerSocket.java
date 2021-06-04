@@ -1,5 +1,7 @@
 package ex;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -21,10 +23,13 @@ public class MyServerSocket {
 				System.out.println("클라이언트의 접속 요청 : Socket 생성");
 			}
 			
-			DataInputStream din = new DataInputStream (socket.getInputStram;)
+			DataInputStream din = new DataInputStream (socket.getInputStream());
 					
-			String msg = din.ready;
-			String 
+			String msg = din.readUTF();
+			System.out.println(msg);
+			
+			din.close();
+			socket.close();
 					
 			
 		} catch (IOException e) {
