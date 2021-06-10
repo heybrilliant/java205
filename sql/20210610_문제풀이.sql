@@ -34,19 +34,19 @@ where hiredate between '1981/2/20' and '1981/05/01';
 -- 7. 부서번호가 20 및 30에 속한 사원의 이름과 부서번호를 출력, 이름을 기준(내림차순)으로 영문자순으로 출력하시오.
 
 select ename, deptno from emp
-where deptno between 20 and 30
+where deptno in(20,30)
 order by ename desc;
 
 -- 8. 사원의 급여가 2000에서 3000사이에 포함되고 부서번호가 20 또는 30인 사원의 이름, 급여와 부서번호를 출력, 이름순(오름차순)으로 출력하시오.
 
 select ename, sal, deptno from emp
-where (sal between 2000 and 3000) and (deptno = 20 or 30)
+where (sal between 2000 and 3000) and (deptno in(20,30))
 order by ename;
 
 -- 9. 1981년도에 입사한 사원의 이름과 입사일을 출력하시오. (like 연산자와 와일드카드 사용)
 
-selec ename, hiredate from emp
-where hiredate like '%1981';
+select ename, hiredate from emp
+where hiredate like '81%';
 
 -- 10. 관리자가 없는 사원의 이름과 담당 업무를 출력하시오.
 
@@ -65,15 +65,15 @@ select ename from emp
 where ename like '__R%';
 
 -- 13. 이름에 A와 E를 모두 포함하고 있는 사원의 이름을 표시하시오.
-<못품>
+
 select ename from emp
 where ename 
-like '%E%' or '%A%';
+like '%A%E%';
 
 -- 14. 담당업무가 CLERK, 또는 SALESMAN이면서 급여가 $1600, $950 또는 $1300이 아닌 사원의 이름, 담당업무, 급여를 출력하시오.
 
 select ename, job, sal from emp
-where (job in CLERK, SALESMAN) and (sal not in(1600,950,1300));
+where (job in ('CLERK', 'SALESMAN')) and (sal not in(1600,950,1300));
 
 -- 15. 커미션이 $500 이상인 사원의 이름과 급여 및 커미션을 출력하시오.
 
