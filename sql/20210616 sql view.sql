@@ -44,3 +44,13 @@ select rownum, ename, hiredate from wiew_hir;
 select rownum, ename, hiredate from  view_hir
 where rownum <6 
 order by ename;
+
+-- sequence : 번호 재생기
+create sequence pi_idx_pk;
+
+select pi_idx_pk.nextval
+from dual; -- 할 때마다 정해진 숫자만큼 증가
+
+select pi_idx_pk.currval
+from dual; -- 할 때마다 새롭게 만듬 (값이 동일)
+
