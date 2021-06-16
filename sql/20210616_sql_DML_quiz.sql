@@ -89,3 +89,7 @@ delete from phoneInfo_com
 where fr_ref = 4;
 
 
+-- 전체 친구정보 
+select *
+from phoneinfo_basic pb, phoneinfo_univ pu, phoneinfo_com pc
+where pb.idx = pu.fr_ref (+) and pb.idx = pc.fr_ref (+);
