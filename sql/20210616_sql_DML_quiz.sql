@@ -7,15 +7,15 @@ desc phoneInfo_basic;
 
 -- insert
 insert into phoneInfo_basic(idx, fr_name, fr_phonenumber, fr_email, fr_address, fr_regdate) 
-values (1, '신하나', '010-1234-5678', '1111@gmail.com', '경기도 부천시', '210616');
+values (PI_IDX_PK.nextval, '신하나', '010-1234-5678', '1111@gmail.com', '경기도 부천시', '210616');
 insert into phoneInfo_basic(idx, fr_name, fr_phonenumber, fr_email, fr_address, fr_regdate) 
-values (2, '고둘째', '010-1122-3344', '2222@gmail.com', '제주도 제주시', '920508');
+values (PI_IDX_PK.nextval, '고둘째', '010-1122-3344', '2222@gmail.com', '제주도 제주시', '920508');
 insert into phoneInfo_basic(idx, fr_name, fr_phonenumber, fr_email, fr_address, fr_regdate) 
-values (3, '한셋째', '010-7788-9999', '3333@gmail.com', '경기도 부천시', '921207');
+values (PI_IDX_PK.nextval, '한셋째', '010-7788-9999', '3333@gmail.com', '경기도 부천시', '921207');
 insert into phoneInfo_basic(idx, fr_name, fr_phonenumber, fr_email, fr_address, fr_regdate) 
-values (4, '송넷째', '010-0000-0000', '4444@gmail.com', '경기도 안양시', '920818');
+values (PI_IDX_PK.nextval, '송넷째', '010-0000-0000', '4444@gmail.com', '경기도 안양시', '920818');
 insert into phoneInfo_basic(idx, fr_name, fr_phonenumber, fr_email, fr_address, fr_regdate) 
-values (5, '유다섯', '010-5555-0828', '5555@gmail.com', '경기도 수원시', '940828');
+values (PI_IDX_PK.nextval, '유다섯', '010-5555-0828', '5555@gmail.com', '경기도 수원시', '940828');
 
 -- select
 select * from phoneInfo_basic ;
@@ -37,15 +37,15 @@ desc phoneInfo_univ;
 
 -- insert
 insert into phoneInfo_univ (idx, fr_u_major, fr_u_year, fr_ref)
-values (1,'생명공학', 4, 2); 
+values (PI_U_IDX_PK.nextval,'생명공학', 4, PI_IDX_PK.currval); -- 외래키 설정
 insert into phoneInfo_univ (idx, fr_u_major, fr_u_year, fr_ref)
-values (2,'문예창작', 2, 3);
+values (PI_U_IDX_PK.nextval,'문예창작', 2, PI_IDX_PK.currval);
 
 
 -- select 
 select * from phoneInfo_univ;
 
-select * 
+select pb.idx, pu.idx, fr_name, pu.fr_u_major, pu.fr_u_year
 from phoneInfo_basic pb, phoneInfo_univ pu
 where pb.idx = pu.fr_ref;
 
@@ -67,9 +67,9 @@ desc phoneInfo_com;
 
 -- insert
 insert into phoneInfo_com (idx, fr_c_company, fr_ref)
-values (1, 'HK', 4); 
+values (PI_C_IDX_PK.nextval, 'HK', PI_IDX_PK.currval); 
 insert into phoneInfo_com (idx, fr_c_company, fr_ref)
-values (2,'Oracle',5);
+values (PI_C_IDX_PK.nextval,'Oracle',PI_IDX_PK.currval);
 
 -- select 
 select * from phoneInfo_com;
@@ -93,3 +93,10 @@ where fr_ref = 4;
 select *
 from phoneinfo_basic pb, phoneinfo_univ pu, phoneinfo_com pc
 where pb.idx = pu.fr_ref (+) and pb.idx = pc.fr_ref (+);
+
+-- 대학친구, 회사 친구 테이블 -> 기본키(대리키) -> sequence 생성 -> insert 개선
+
+-- sequence : 번호 재생기 
+create sequence pi_idx_pk;
+create sequence pi_u_idx_pk start with 5 increment by 1;
+create sequence pi_c_idx_pk start with 5 increment by 1;
