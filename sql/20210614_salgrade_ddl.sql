@@ -123,7 +123,7 @@ on e.mgr = m.empno;
 -- 회원별 구매내역 출력 
 select c.name, count(o.orderid) as "구매횟수", avg(saleprice)
 from orders o , customer c -- join 
-where o.custid (+)= c.custid
+where o.custid (+)= c.custid --구매횟수가 null이어도 출력하고 싶어서 o.custid에 (+)
 group by c.name
 order by c.name
 ;
