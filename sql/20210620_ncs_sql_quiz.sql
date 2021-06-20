@@ -78,7 +78,8 @@ on emp(ename)
 -- view 의 이름은 emp_view 로 하시오. 
 create or replace view emp_view 
 as select *
-from emp, dept;
+from emp e, dept d
+where e.deptno = d.deptno;
 
 -- 3. EMP 테이블에서 모든 사원의 부서번호를 이름이 'SCOTT'인 사원의 부서번호로 변경하는 SQL을 작성하시오.
 update emp
