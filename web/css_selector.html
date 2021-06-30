@@ -6,31 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!--태그 선택 -> * : 전체 선택 // h1 {} : h1의 스타일을 변경-->
-    /*이 주석은 되나요*/
     <style>
+        /* 스타일은 맨 아랫 초기화 스타일을 우선으로 지정함*/
+        /* 여러개의 선택자 */
+        /* 컴마로 여러개의 선택자를 지정해서 설정할 수 있음 */
+        *, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+        /* padding 속성간의 간격 */
+        
         /* css의 주석은 자바의 블럭 주석과 같다 */
         /*전체 선택자*/
         * {
             color : red;
         }
         /* 태그 선택자 */
+        /* margin : 떨어트림 -> margin-top : 요소가 맨위부터 얼마나 떨어지는지, margin-left -> 요소의 왼쪽 들여쓰기 */
         h1{
             background-color: yellow;
+            margin-top : 30px;
+            margin-left: 30px;
         }
+        p{
+            background-color: yellowgreen;
+        }
+
         /*아이디 선택자*/
-        #title{
+        /* # + title{} */
 
+
+        #title{
+            font-size: 16px;
+        }
+        /* 클래스 선택자 */
+        .font_a {
+            font-style : italic ;
+        }
+        .font_b {
+            font-weight: 100;
         }
 
+        
     </style>
     <script>
     </script>
 
 </head>
 <body>
-    
-    <h1 id="title">가나다라마바사 이건 제목입니다!</h1>
-    <p>
+    <!-- 클래스에는 여러개의 속성을 스페이스 공백을 두고 선언할 수 있다 -->
+    <h1 id = "title" class = "font_a font_b">가나다라마바사 이건 제목입니다!</h1>
+    <p class = "font_a font_b"> 
         이건 기사라고 칩시다. 
     </p>
 </body>
