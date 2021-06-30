@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,54 +11,367 @@
         /* 스타일은 맨 아랫 초기화 스타일을 우선으로 지정함*/
         /* 여러개의 선택자 */
         /* 컴마로 여러개의 선택자를 지정해서 설정할 수 있음 */
-        *, h1, p {
+        body,
+        h1,
+        p {
             margin: 0;
             padding: 0;
         }
+
+        h1::selection, p::selection{
+            background-color:lightseagreen;
+
+        }
+
+        hr{
+
+        }
+
         /* padding 속성간의 간격 */
-        
+
         /* css의 주석은 자바의 블럭 주석과 같다 */
         /*전체 선택자*/
-        * {
-            color : red;
-        }
+        /* * {
+             color : red; 
+        }*/
         /* 태그 선택자 */
         /* margin : 떨어트림 -> margin-top : 요소가 맨위부터 얼마나 떨어지는지, margin-left -> 요소의 왼쪽 들여쓰기 */
-        h1{
-            background-color: yellow;
+        /*h1{
+             background-color: yellow;
             margin-top : 30px;
             margin-left: 30px;
-        }
-        p{
-            background-color: yellowgreen;
-        }
+        } */
+        /* p{
+            background-color: yellowgreen; 
+        }*/
 
         /*아이디 선택자*/
         /* # + title{} */
 
-
-        #title{
-            font-size: 16px;
+        #title {
+            font-size: 30px;
         }
+
         /* 클래스 선택자 */
         .font_a {
-            font-style : italic ;
+            font-style: italic;
         }
+
         .font_b {
             font-weight: 100;
         }
 
+        #header {
+            background-color: red;
+            color: white;
+            width: 400px;
+            /*  margin : 상하간격 좌우간격*/
+            margin: 1px;
+        }
+
+        #Aside {
+            background-color: blue;
+            color: white;
+            width: 50%;
+        }
+
+        #content {
+            background-color: green;
+            color: white;
+            width: 200px;
+        }
+
+        li.back_color_green {
+            background-color: yellowgreen;
+        }
+
+        h1.back_color_green {
+            background-color: yellowgreen;
+        }
+
+        /* 속성 선택자 */
+        input[type] {
+            width: 150px;
+            height: 50px;
+            font-size: 150%;
+            /*16px * 1.5 ->24px*/
+        }
+
+        input[type=text] {
+            background-color: yellow;
+        }
+
+        input[type=password] {
+            background-color: springgreen;
+        }
+
+        .img {
+            width: 200px;
+            height: 250px;
+        }
+
+        img[src$=jpg] {
+            border: 5px solid red;
+            /*solid :실선*/
+        }
+
+        img[src$=png] {
+            border: 5px solid blue;
+        }
+
+        img[src$=gif] {
+            border: 5px solid black;
+        }
+
+        /* 
+        후손 (공백 1칸) 선택자 (앞)
+        부모선택 (공백 1칸) 선택자  */
+        #header1 h1 { 
+            color : red;
+        }
+
+        #section h1{
+            color : orange;
+        }
+
+        /* 
+        자손 선택자 
+        부모선택>선택자  
+        */
+        #header1>h1 {
+            background-color: palegoldenrod;
+        }
+
+        #section>h1 {
+            background-color: palegreen;
+        }
+
+        /*
+        동위선택자 
+        기준 선택 요소 뒤에 오는 요소를 선택 
+        1. 바로 뒤에 위치하는 요소를 선택
+        2. 뒤에 존재하는 요소를 선택  
+        */
+
+        /* 바로 뒤에 위치하는 요소를 선택 : + 이용 */
+        #title1+h2 {
+            background-color: rebeccapurple;
+        }
+        /* 기준 요소 뒤로 존재하는 요소를 선택  */
+        #title1~h2{
+            background-color: black;
+        }
+
+        /* 선택 영역에 마우스 커서가 위치하는 경우 -> :hover */
+        #btn00:hover{
+            background-color: crimson;
+            color :white;
+        }
+        /* 클릭할때 이벤트 발생 : :active */
+        #btn00:active{
+            background-color: teal;
+            color: white;
+        }
         
+        /* a태그는 인라인태그이기 때문에 click이라는 글자 위에 올라가야 이벤트가 발생됨  */
+        h1>a:hover {
+            color: deeppink;
+        }
+
+        /* 입력 양식 태그의 상태로 선택  */
+        input :disabled{
+            background-color: black;
+        }
+        /* input :enabled{
+            width: 200px;
+            height: 35px;
+            font-size: 1.2em; /*120%*/
+        } */
+
+        input:focus{
+            border: 5px solid red;
+        }
+        /* 커서가 칸안에 들어가서 클릭하면 5픽셀두께의 빨간 선이 생김 */
+
+        
+    div.box{
+        width : 500px;
+        height : 150px;
+        border : 1px solid black;
+    }
+
+    input[type=checkbox]:checked {
+        width : 30px;
+        height : 30px;
+    }
+
+    input[type=checkbox]:checked+div{
+        /* background-color:blanchedalmond; */
+        /* height: 0px;
+        overflow: hidden; */
+        display : none;
+    }
+    /* 넘치면 hidden 숨기라는 코드 */
+    /* display : none 도 마찬가지로 보여지는게 none이라는 뜻*/
+
+    label{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    ol{
+        overflow:hidden;
+        list-style: none;
+        /* list-style: ; = 숫자를 빼줌 */
+    }
+
+    ol>li{
+        float : left;
+        /* width: 100px; -> width 안해주면 텍스트 너비만큼만 영역이 나옴 */
+        padding : 5px 30px;
+        /* padding -> 상하좌우 여백 주는것*/
+    }
+
+    
+    ol>li:nth-child(2n){
+        background-color: chartreuse;
+    }
+    ol>li:nth-child(2n+1){
+        background-color:cyan;
+    }
+    ol>li:first-child{
+        border-radius: 10px 0 0 10px ;
+    }
+    ol>li:last-child{
+        border-radius: 0 10px 10px 0;
+    }
+
+    ol>li:hover{
+        background-color: darkcyan;
+        color: white;
+        font-weight: bold;
+    }
+
+    a{
+        text-decoration: none;
+        color: mediumvioletred;
+    }
+    a:visited{
+        color: mediumvioletred;
+    }
+
+    a:hover{
+        text-decoration: underline;
+    }
+    /* text위로 커서 올리면 밑줄 쳐짐 */
+
     </style>
-    <script>
-    </script>
+
 
 </head>
 <body>
+    
+    <ol>
+        <li><a href="http://naver.com">naver</a></li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+        <li>five</li>
+        <li>six</li>
+        <li>seven</li>
+    </ol>
+
+    <hr>
+    <label for="chk"> check </label>
+    <input id="chk" type="checkbox">
+    <!-- 태그는 그대로 있는데 display때문에 안보이는 것처럼 보이는 것일 뿐 -->
+    <div class="box">
+        <h1>개인정보보호정책</h1>
+        <p>
+            개인 정보를 활용합니다.
+        </p>
+    </div> 
+
+
+    <hr>
+    <input>
+
+    <!-- disabled : 입력이 불가능한 상태 -->
+    <input disabled>
+    <!-- 아래와 같이 치면 칸에 test라는 값은 입력되어있지만 입력 또는 수정이 불가능한 상태로 표현 -->
+    <input disabled value="test">
+
+    <hr>
+    <!-- #은 자기자신의 페이지를 의미함 -->
+    
+    <h1><a href="#">click</a></h1>
+    <h1 id="btn00">Button</h1>
+
+
+    <hr>
+    <h2>header2-0</h2>
+    <h1 id="title1">header1</h1>
+    <h2>header2-1</h2>
+    <h2>header2-2</h2>
+    <h2>header2-3</h2>
+    <h2>header2-4</h2>
+    <h2>header2-5</h2>
+
+    <hr>
+    <h2>header2-6</h2>
+
+    <div id="header1">
+        <h1 class="title">Lorem ipsum</h1>
+        <div id="nav">
+            <h1>Navigation</h1>
+            <h2>header2-7</h2>
+        </div>
+    </div>
+    <div id="section">
+        <h1 class="title">Lorem ipsum</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+
+
+    <hr>
+    <img src="a.jpg" alt="a.jpg" class="img">
+    <img src="b.png" alt="b.png" class="img">
+    <img src="c.gif" alt="c.gif" class="img">
+
+
+    <hr>
+    <input type="text"> <input type="password">
+
+    <hr>
+    <ul>
+        <li class="font_color_blue">사과</li>
+        <li class="back_color_green">바나나</li>
+        <li class="font_color_blue">오렌지</li>
+        <li>레몬</li>
+    </ul>
+
+
+
+
+
+    <div id="header">
+        <h1>Header</h1>
+    </div>
+    <div id="wrap">
+        <div id="Aside">
+            <h1>Aside</h1>
+        </div>
+        <div id="content">
+            <h1>content</h1>
+        </div>
+    </div>
+
     <!-- 클래스에는 여러개의 속성을 스페이스 공백을 두고 선언할 수 있다 -->
-    <h1 id = "title" class = "font_a font_b">가나다라마바사 이건 제목입니다!</h1>
-    <p class = "font_a font_b"> 
-        이건 기사라고 칩시다. 
+    <h1 id="title" class="font_a font_b" class="back_color_green">가나다라마바사 이건 제목입니다!</h1>
+    <p class="font_a font_b">
+        이건 기사라고 칩시다.
     </p>
 </body>
+
 </html>
