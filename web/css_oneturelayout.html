@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            padding-top: 30px;
+        }
+
+        /* 공통으로 쓰는거 가져다가 class로 묶어주기 */
+        .border{
+            border: 1px solid #aaa;
+        }
+        .text_center{
+            text-align: center;
+        }
+        .font_size_200p{
+            font-size: 200%; 
+        }
+
+        .div_algin_center{
+            margin: 0 auto;
+        }
+
+        header{
+            width: 798px;
+            /* 800에 맞추려면 보더의 왼쪽1픽셀 오른쪽1픽셀 총 2픽셀까지 합쳐야해서 798픽셀처리 */
+            height: 80px;
+            line-height: 80px;
+        }
+        nav{
+            width: 798px;
+            height: 30px;
+            line-height: 30px;
+        }
+        section{
+            width: 598px;
+            height: 400px;
+            float: left;
+        }
+        aside{
+            width:198px;
+            height: 200px;
+            float : right;
+        }
+        #wrap{
+            width: 800px;
+            overflow: hidden;
+        }
+        footer{
+            width: 798px;
+            height: 100px;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header class="border text_center font_size_200p div_algin_center">header</header>
+    <nav class="border text_center font_size_200p div_algin_center">메뉴영역 네비게이션</nav>
+    <div id="wrap" class="div_algin_center">
+        <section class="border text_center font_size_200p div_algin_center">
+            <article>기사내용 5.5매</article>
+        </section>
+        <aside class="border text_center font_size_200p">
+            서브 기사 1매
+        </aside>
+    </div>
+    <footer class="border text_center font_size_200p div_algin_center">footer</footer>
+</body>
+</html>
