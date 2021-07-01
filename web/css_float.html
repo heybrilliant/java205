@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div.box{
+        width: 100px;
+        height: 100px;
+
+        background-color: hotpink;
+        text-align: center;
+        line-height: 100px;
+
+        border:3px solid #ddd;
+
+        float: left;
+        /* 윗순서부터 왼쪽에 붙어서 들어간다 */
+        /* float: right;
+           윗순서부터 오른쪽으로 붙어서 보인다 = 3 2 1 순으로 보임 */
+        }
+        #wrap{
+            overflow: hidden;
+           }
+</style>
+<body>
+
+    <div id="wrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <!-- footer라는 글자를 123박스아래에 병합한 박스에 두고싶다면
+    <div>footer</div> 이렇게만 쓰면 123박스 오른쪽에 붙어버림
+    float가 전체적으로 영향을 끼치고 있기 때문에
+    -> 해결방법 : overflow를 사용해준다-->
+    <div>footer</div>
+
+</body>
+
+</html>
