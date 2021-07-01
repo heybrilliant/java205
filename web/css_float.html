@@ -24,8 +24,12 @@
            윗순서부터 오른쪽으로 붙어서 보인다 = 3 2 1 순으로 보임 */
         }
         #wrap{
-            overflow: hidden;
+            /* overflow: hidden; */
            }
+        #footer{
+            clear: both;
+            /* clear : 모두 해제 */
+        }
 </style>
 <body>
 
@@ -37,8 +41,9 @@
     <!-- footer라는 글자를 123박스아래에 병합한 박스에 두고싶다면
     <div>footer</div> 이렇게만 쓰면 123박스 오른쪽에 붙어버림
     float가 전체적으로 영향을 끼치고 있기 때문에
-    -> 해결방법 : overflow를 사용해준다-->
-    <div>footer</div>
+    -> 해결방법 :  clear 사용해준다-->
+    <div id="footer">
+        footer</div>
 
 </body>
 
