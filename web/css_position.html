@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+   div.box{
+       width: 100px;
+       height: 100px;
+
+       position : absolute;
+   }
+   #b1{
+       background-color: red;
+       left : 50px;
+       top : 50px;
+       z-index: 1000;
+   }
+   /* z-index : 큰 숫자가 가장 맨 위로 나오게! (숫자비교형) */
+   #b2{
+       background-color: green;
+       left : 100px;
+       top : 100px;
+       z-index: 999;
+   }
+   #b3{
+       background-color: blue;
+       left : 150px;
+       top : 150px;
+   }
+   header{
+
+   }
+
+   footer{
+       border : 1px solid #ddd;
+   }
+
+   #wrapper{
+       height: 100px;
+       width: 500px;
+       border : 1px solid #ddd;
+
+       position: relative;
+       overflow-x: auto; /*x축에 필요한 경우 스크롤을 만들어줌(overflow-y:y축에 필요하면~~)*/
+       /* overflow: hidden; -> 나머지 벗어난 경우에는 표현하지 않는다*/
+       /* overflow: scroll; -> 벗어난 경우에 스크롤을 만들어 전부 볼수있게 함*/
+   }
+
+</style>
+<body>
+    <h1>헤더영역입니다</h1>
+
+    <div id="wrapper">
+        <div id="b1" class="box"></div>
+        <div id="b2" class="box"></div>
+        <div id="b3" class="box"></div>
+    </div>
+   
+    <footer>
+        푸터영역입니다
+    </footer>
+</body>
+</html>

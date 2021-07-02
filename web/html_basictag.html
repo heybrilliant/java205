@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<!--웹 문서의 추가적인 속성들을 정의-->
+<head>
+    <!--문서의 제목-->
+    <title>HTML5 기본태그</title>
+    <!--문서의 추가적인 속성-->
+    <meta charset="UTF-8"> <!--웹 문서의 문자 셀 설정-->
+    <style>
+        div{
+            background-color: yellowgreen;
+            margin-top : 50px;
+                height: 10px ;
+        }
+        
+        span{
+            background-color: yellow;
+            margin-top: 10px;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+    <script></script>
+</head>
+
+<body>
+    <video 
+        src = "media/trailer.mp4"
+        controls
+        preload="auto"
+        poster="images/KakaoTalk_20210530_171041239.jpg"
+        loop
+        autoplay
+        width="400"
+        height="300">
+    </video>
+
+    
+    <audio src="media/old_pop.mp3"  controls></audio>
+
+
+    <div> div - 1</div>
+    <div> div - 2</div>
+    <div> div - 3</div>
+
+    <span> span - 1</span>
+    <span> span - 2</span>
+    <span> span - 3</span>
+
+    <!--이미지 태그-->
+        <img src="images/KakaoTalk_20210530_171041239.jpg" height="300"> <!--높이 조정 : height -> 폭은 비율에 맞게 조정됨 단위는 픽셀-->
+        <!--강제적으로 높이와 폭을 조정하면 이미지 비율의 변동(왜곡)이 생김-->
+        <!-- 보통은 폭(width)을 먼저 맞추고 높이는 자연스러운 비율에 맞춰 조정되게 함-->
+        <img src="images/KakaoTalk_20210625_210700282.jpg" height="300">
+        
+        <hr>
+
+    <!-- 셀 합치기-->
+    <table border = "1">
+        <tr>
+            <th colspan = "2">지역별 홍차</th>
+        </tr>
+        <tr>
+            <th rowspan="3">중국</th>
+            <td>정산소종</td>
+        </tr>
+        <tr>
+            <td>기문</td>
+        </tr>
+        <tr>
+            <td>운남</td>
+        </tr>
+        <tr>
+            <th rowspan="4">인도 및 스리랑카</th>
+            <td>아삼</td>
+        </tr>
+        <tr>
+            <td>실론</td>
+        </tr>
+        <tr>
+            <td>다즐링</td>
+        </tr>
+        <tr>
+            <td>닐기리</td>
+        </tr>
+    </table>
+
+
+
+
+
+
+    <!--body 사이 = 화면에 보여질 내용 -->
+    <!--h1 ~ h6 --> 
+    <h1>header - h1</h1>
+    <h2>header - h2</h2>
+    <h3>header - h3</h3>
+    <h4>header - h4</h4>
+    <h5>header - h5</h5>
+    <h6>header - h6</h6>
+
+    <a href="http://www.bitcamp.co.kr">비트캠프</a>
+    <a href="http://naver.com">네이버</a>
+    <a href="http://daum.net">다음</a>
+
+    <ul>
+        <li>사과</li>
+        <li>바나나</li>
+        <li>오렌지</li>
+    </ul>
+    <ol>
+        <li>사과</li>
+        <li>바나나</li>
+        <li>오렌지</li>
+    </ol>
+
+    <table border = "1">
+        <thead>
+            <tr>
+                <td>thread 1</td>
+                <td>thread 2</td>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> tbody 1 - 1</td>
+                <td> tbody 1 - 2</td>
+            </tr>
+            <tr>
+                <td> tbody 2 - 1</td>
+                <td> tbody 2 - 2</td>
+            </tr>
+            <tr>
+                <td>111</td>
+                <td>222</td>
+                <td>333</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>tfoot - 1</td>
+                <td>tfoot - 2</td>
+            </tr>
+        </tfoot>
+
+    </table>
+    <table border = "1">
+            <tr>
+                <th>thead 1</th>
+                <th>thead 2</th>
+                
+            </tr>
+            <tr>
+                <td> tbody 1 - 1</td>
+                <td> tbody 1 - 2</td>
+            </tr>
+            <tr>
+                <td> tbody 2 - 1</td>
+                <td> tbody 2 - 2</td>
+            </tr>
+            <tr>
+                <td>111</td>
+                <td>222</td>
+                <td>333</td>
+            </tr>
+            <tr>
+                <td>tfoot - 1</td>
+                <td>tfoot - 2</td>
+            </tr>
+    </table>
+</body>
+
+</html>
