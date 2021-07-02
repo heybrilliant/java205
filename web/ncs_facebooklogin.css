@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color : #f0f2f5;
+}
+.logobox{
+    float: left;
+    overflow: hidden;
+    font-size: 20px;
+    display: scroll;
+}
+
+.loginbox{
+    float:right;
+    width: 400px;
+    height: 350px;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    margin-right: 30px;
+    box-shadow: 3px 3px 3px ddd;
+    overflow: hidden;
+    border-radius: 10px;
+    color:#aaa;
+}
+
+div>section>input[type=text]{
+    width: 400px;
+    height: 40px;
+}
+
+.login2{
+
+    float: right;
+}
+
+#bottom{
+    float :bottom;
+    margin-bottom: 30px;
+}
+
+footer>ul{
+    /* overflow: hidden; */
+    list-style: none;
+}
+
+footer>ul>li{
+    float: left;
+}
+
+
+
+.facebook_img{
+    border : 0;
+    width: 400px;
+}
