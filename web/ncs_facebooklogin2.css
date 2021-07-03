@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color : #f0f2f5;
+}
+.logobox{
+    width: 55%;
+    height: 600px;
+    text-align: left;
+    font-size: 20px;
+    margin-left: 50px;
+    background-color: aqua;
+}
+
+.loginbox{
+    width: 40%;
+    float: right;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    background-color: chocolate;
+}
+
+div>section>input[type=text]{
+    margin-left: 10px;
+}
+
+div>section>input[type=submit]{
+    margin-left: 10px;
+    text-align: center;
+    width:90%
+}
