@@ -41,13 +41,15 @@ div>section>p1:hover{
 }
 
 div>section>p2{
-    width: 20%;
+    display: block;
+    width: 150px;
     height: 30px;
+    text-align: center;
     background-color:rgb(45, 161, 45) ;
     border-radius: 5px;
     color: white;
     font-weight: bold;
-    text-align: center;
+    line-height: 30px;
 }
 div>section>p2:hover{
     background-color:green;
