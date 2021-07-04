@@ -24,6 +24,35 @@ div>section>input[type=text]{
     margin-left: 10px;
 }
 
+div>section>hr{
+    width: 80%;
+    border: 1px solid #aaa;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+div>section>p1{
+    text-align: center;
+}
+
+div>section>p1:hover{
+    text-decoration-line: underline;
+}
+
+div>section>p2{
+    width: 20%;
+    height: 30px;
+    background-color:rgb(45, 161, 45) ;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+div>section>p2:hover{
+    background-color:green;
+}
+
 div>section>input[type=submit]{
     margin-left: 10px;
     text-align: center;
