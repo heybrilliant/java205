@@ -14,14 +14,41 @@
 
 .loginbox{
     width: 40%;
+    height: 300px;
     float: right;
     border: 1px solid #aaa;
     border-radius: 10px;
     background-color: chocolate;
+    box-shadow: 2px 2px 3px #ddd;
+    text-align: center;
 }
 
 div>section>input[type=text]{
     margin-left: 10px;
+    width: 90%;
+    height: 40px;
+    border-radius: 7px;
+    color:#aaa;
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+}
+
+
+div>section>input[type=submit]{
+    width: 90%;
+    height: 40px;
+    border-radius: 7px;
+    color: white;
+    font-weight: bold;
+    background-color: #3578e5;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+div>section>input[type=submit]:hover{
+    background-color: #2867cc;
 }
 
 div>section>hr{
@@ -29,11 +56,15 @@ div>section>hr{
     border: 1px solid #aaa;
     margin-top: 10px;
     margin-bottom: 10px;
-    
 }
 
 div>section>p1{
     text-align: center;
+    margin-top: 20px;
+}
+
+div>section>p1{
+    color:  #3578e5;
 }
 
 div>section>p1:hover{
@@ -51,6 +82,7 @@ div>section>p2{
     font-weight: bold;
     line-height: 30px;
 }
+
 div>section>p2:hover{
     background-color:green;
 }
