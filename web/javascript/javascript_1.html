@@ -13,6 +13,33 @@
         // alert함수는 사용자에게 경고 메세지를 출력합니다.
         // alert('Javascript! Hello!')
     </script>
+
+    <script>
+
+        // // 브라우저가 html문서의 내용을 모두 로드 했을때 발생하는 이벤트 속성
+        // // 이벤트 속성에는 핸들러(이벤트 처리 함수)를 등록한다
+        // window.onload = function(){
+
+        //     var list = '';
+        //     // list = list + '<ul>\n';
+        //     // list = list + '<li>Javascript</li>\n';
+        //     // list = list + '<li>jQuery</li>\n';
+        //     // list = list + '</ul>\n';
+
+        //     list += '<ul>\n';
+        //     list += '<li>Javascript</li>\n';
+        //     list += '<li>jQuery</li>\n';
+        //     list += '</ul>\n';
+
+        //     console.log('출력할 html : ',list); // 모든 타입의 데이터를 출력
+            
+        //     // html 문서의 body 태그에 list가 가지는 문자열을 HTML 태그로 삽입
+
+        //     // 문서객체 캐스팅 -> 태그를 자바스크립트의 객체로 만드는 것
+        //     document.body.innerHTML = list;
+        //}
+    </script>
+
 </head>
 <body>
     <!-- <script>
@@ -32,13 +59,155 @@
 <script>
     //Javascript 에서의 숫자는 정수와 실수를 구분하지 않고 하나의 타입으로 관리 
     // 숫자 -> number 타입 하나로 처리
-    var num = 10;
-    alert(num);
-    num = 10.2;
-    alert(num);
+    // var num = 10;
+    // alert(num);
+    // num = 10.2;
+    // alert(num);
 
-    alert(5+3*2); // 3*2 = 6 + 5 = 11
-    alert((5+3)*2); // 8 * 2 = 16
+    // alert(5+3*2); // 3*2 = 6 + 5 = 11
+    // alert((5+3)*2); // 8 * 2 = 16
     // 문장의 종결을 의미하는 ;은 생략 가능 -> 없어도 오류X
     // 하지만 붙이는 걸 습관화 하기!
+</script>
+<!-- 
+<script>
+    // 비교연산 : > < >= <= == !=
+    // 문자열간의 크기 비교가 가능 -> 유니코드 값으로 비교를 함 
+    alert('가'=='가 ='+('가'=='가'));
+    alert('가'=='하 ='+('가'=='하'));
+    alert('가'>'하 = '+('가'>'하'));
+    alert('가'<'하 = '+ ('가'<'하'));
+
+    // true -> 1 false ->0
+    alert('true > false : '+ (true > false));
+  
+</script> -->
+
+<!-- <script>
+    
+    alert(true);
+    alert(false);
+
+    // 논리부정연산자 : !
+    alert('!true : '+ !true);
+    alert('!false : '+ !false);
+
+    var num = 10;
+    var chk = num>0 && num<100; // 0보다 크고 100보다 작은지 체크 논리연산 
+    
+    if(num>0){
+        // 조건식의 결과가 true일때 실행하는 블록(={})
+        alert('num 변수의 값은 0보다 큰 값 입니다.')
+    }
+
+    if(chk){
+        alert('num의 값은 0보다 크고 100보다 작은 숫자 입니다.')
+    }
+
+</script> -->
+<!-- 
+<script>
+
+    // Javascript의 변수
+    // 변수는 해당 값을 저장하는 것이 아니라 값이 저장된 메모리의 주소 값을 저장!
+
+    // 변수의 선언 -> var 키워드 사용
+    // : var 식별자;
+
+    var pi; //변수 pi가 생성됨 -> undefined 값이 초기화됨
+    alert(pi); // undefined 출력
+    //변수 pi에 값을 할당(대입)
+    pi = 3.141592; // 숫자 타입의 값을 저장 -> 정수와 실수를 구분하지 않는다
+    alert(pi); // 3.141592 출력
+
+    // 변수 선언과 할당을 동시에 처리
+    var PI = 3.14;
+    alert(PI);
+
+</script> -->
+
+<script>
+    // Javascript의 타입
+    // 1. 문자열 : '', ""
+    // 2. 숫자 : 정수, 실수를 구분하지 않고, 8byte 부동소수점 형식으로 저장
+    // 3. bool : true / false 논리값을 저장
+    // 4. 함수 : 함수를 저장
+    // 5. 객체 : 객체를 저장
+    // 6. undefined : undefined 상태의 값을 저장 
+
+    // var str = 'String!!!';
+    // var num = 100;
+    // var check = false;
+    // var printStr = function(){alert('함수를 저장하는 변수로 호출')}; // 익명 함수로 정의 
+    // var objectVar = {name:'SON', age:30, hello: function(){}}; // 객체를 정의하는 간단한 방법
+
+    // alert(str);
+    // alert(num);
+    // alert(check);
+    // alert(printStr);
+    // alert(objectVar);
+
+    // // 함수 호출
+    // printStr();
+    // // 객체 참조
+    // alert(objectVar.name);
+    // alert(objectVar.age);
+    // objectVar.hello();
+
+    // // 내장 함수 객체 생성
+    // var now = new Date(); 
+    // alert(now);
+
+    // // 객체 정의 : 속성(객체가 가지는 변수), 메소드(객체가 가지는 기능(함수))
+    // var person = {
+    //     name:'SON', 
+    //     age:30, 
+    //     hello: function(){
+
+    //     }
+    //     };
+</script>
+
+<!-- 
+<script>
+    var value = 10;
+    value += 20;
+    alert(value);
+
+    var value = 'Javascript';
+    value = 'Javascript';
+    alert(value);
+</script> -->
+
+<script>
+
+    // 배열 : 여러개의 변수를 하나의 묶음으로 관리
+    // 배열의 생성 : []
+    // 배열의 요소는 타입으로 제한을 두지 않는다 
+    // -> 요소가 어떤 타입으로 와도 상관없다(자바와 다름!)
+    // 배열도 객체다 
+    var arr1 = [11,22,33,44,55];
+    console.log(typeof arr1);
+
+
+    // alert(arr1);
+    console.log('arr1',arr1);
+
+    // 요소는 어떠한 타입이 와도 가능!
+    var arr2 = [100, 'String', function(){}, {}, [1,100]];
+    console.log('arr2', arr2);
+
+    // for 반복문을 이용한 요소 출력
+    for(var i=0; i<arr1.length; i++){
+        console.log(i, arr1[i]);
+    }
+
+    for(var i=0; i<arr2.length; i++){
+        console.log(i, arr2[i]);
+    }
+
+    // for in 반복문을 통해서 배열의 요소를 일괄 출력    
+    for(var e in arr1){
+        console.log(arr1[e]);
+    }
 </script>
