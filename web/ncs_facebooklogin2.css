@@ -4,23 +4,25 @@
     background-color : #f0f2f5;
 }
 .logobox{
-    width: 55%;
+    width: 800px;
     height: 600px;
     text-align: left;
     font-size: 20px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
     background-color: aqua;
+    display: inline-block;
 }
 
 .loginbox{
-    width: 40%;
-    height: 300px;
-    float: right;
+    width: 500px;
+    height: 400px;
     border: 1px solid #aaa;
     border-radius: 10px;
     background-color: chocolate;
     box-shadow: 2px 2px 3px #ddd;
     text-align: center;
+    display: inline-block;
+    
 }
 
 div>section>input[type=text]{
@@ -31,19 +33,17 @@ div>section>input[type=text]{
     color:#aaa;
     margin-top: 10px;
     margin-bottom: 5px;
-
 }
 
 
 div>section>input[type=submit]{
     width: 90%;
-    height: 40px;
+    height: 43px;
     border-radius: 7px;
     color: white;
     font-weight: bold;
     background-color: #3578e5;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 7px 0;
     font-size: 1.2em;
 }
 
@@ -51,39 +51,37 @@ div>section>input[type=submit]:hover{
     background-color: #2867cc;
 }
 
-div>section>hr{
-    width: 80%;
-    border: 1px solid #aaa;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-div>section>p1{
+div>section>p{
     text-align: center;
     margin-top: 20px;
-}
-
-div>section>p1{
     color:  #3578e5;
 }
-
-div>section>p1:hover{
+div>section>p:hover{
     text-decoration-line: underline;
 }
 
-div>section>p2{
+div>section>hr{
+    width: 80%;
+    border: 1px solid #aaa;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+div>section>button{
     display: block;
-    width: 150px;
-    height: 30px;
+    margin: ;
+    width: 170px;
+    height: 40px;
+    font-size: 17px;
     text-align: center;
     background-color:rgb(45, 161, 45) ;
     border-radius: 5px;
     color: white;
     font-weight: bold;
-    line-height: 30px;
+    line-height: middle;
 }
 
-div>section>p2:hover{
+div>section>button:hover{
     background-color:green;
 }
 
@@ -91,4 +89,11 @@ div>section>input[type=submit]{
     margin-left: 10px;
     text-align: center;
     width:90%
+}
+
+div>p{
+    margin-top: 30px;
+}
+div>p>p2{
+    font-weight: bold;
 }
