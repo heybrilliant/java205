@@ -17,7 +17,7 @@
             <section class="joinbox">
                 아이디
                 <br>
-                <input type="text" value="@naver.com">
+                <input id = email type="text" value="@naver.com">
                 <br>
                 비밀번호
                 <br>
@@ -32,8 +32,8 @@
                 <input type="text">
                 <br>
                 생년월일<br>
-                <input type="text" value="년(4자)">
-                <select type="month">
+                <input id=ymd type="text" value="년(4자)">
+                <select id=ymd type="month">
                     <option value="">월</option>
                     <option value="jan">1</option>
                     <option value="feb">2</option>
@@ -48,7 +48,7 @@
                     <option value="nov">11</option>
                     <option value="dec">12</option>
                 </select>
-                <input type="text" value="일">
+                <input id=ymd type="text" value="일">
                 <br>
                 성별<br>
                 <select type="gender">
@@ -57,7 +57,7 @@
                     <option value="female">여</option>
                     <option value="none">선택안함</option>
                 </select><br>
-                본인확인 이메일(선택)<br>
+                본인확인 이메일<p1>(선택)</p1><br>
                 <input type="text" value="선택입력"><br>
                 휴대전화<br>
                 <select type="countrynum" value="대한민국 +82">
@@ -65,8 +65,8 @@
                     <option value="jap">일본 +81</option>
                     <option value="ame/can">미국/캐나다 +1</option>
                 </select><br>
-                <input type="text" value="전화번호 입력">
-                <input type="submit" value="인증번호 받기"><br>
+                <input id = protectnum type="text" value="전화번호 입력">
+                <input id = protectbutton type="button" value="인증번호 받기"><br>
                 <input type="text" value="인증번호 입력하세요"><br>
                 <input type="submit" value="가입하기"><br>
             </section>
@@ -75,17 +75,20 @@
         <div>
             <footer>
                 <ul>
-                    <li><a href="#">이용약관ㅣ </a></li>
-                    <li><a href="#">개인정보처리방침ㅣ  </a></li>
-                    <li><a href="#">책임의 한계와 법적고지ㅣ  </a></li>
-                    <li><a href="#">회원정보 고객센터 </a></li>
+                    <li><href="#">이용약관</href=></li>
+                    <li>ㅣ</li>
+                    <li class =p3><href="#">개인정보처리방침</href=></li>
+                    <li>ㅣ</li>
+                    <li><href="#">책임의 한계와 법적고지</href=></li>
+                    <li>ㅣ</li>
+                    <li><href="#">회원정보 고객센터 </href=></li>
                 </ul>
             </footer>
         </div>
         <div>
-            <footer2>
+            <footer2 class=footer2>
                 <br>
-                <img class="naverlogo2" src="naver 로고.png"> NAVER Corp. All Rights Reserved.
+                <img class="naverlogo2" src="naver 로고.png"> Copyright <p>NAVER Corp.</p> All Rights Reserved.
             </footer2>
         </div>
 </body>
