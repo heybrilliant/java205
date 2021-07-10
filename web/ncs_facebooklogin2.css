@@ -6,6 +6,7 @@
 .logobox{
     width: 800px;
     height: 600px;
+    margin-left: 100px;
     text-align: left;
     font-size: 20px;
     /* margin-left: 50px; */
@@ -69,7 +70,7 @@ div>section>hr{
 
 div>section>button{
     display: block;
-    margin: ;
+    float: center;
     width: 170px;
     height: 40px;
     font-size: 17px;
