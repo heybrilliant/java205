@@ -43,8 +43,8 @@ div>section>input[type=text]{
     margin-bottom: 10px;
     border : 1px solid #ccc;
     color: #aaa;
-    padding-left: 10px;    
-    /* padding-right: 12px; */
+    padding-left: 5px;    
+    
 }
 
 #email{
@@ -79,7 +79,7 @@ div>section>input[type=submit]{
 }
 
 #ymd{
-    width: 127.5px;
+    width: 123px;
     display: inline-block;
 }
 
@@ -93,7 +93,7 @@ div>section>input[type=button]{
 }
 
 #protectnum{
-    width : 66.5%;
+    width : 64%;
     display: inline-block;
     margin-right: 5px;
 }
