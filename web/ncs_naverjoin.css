@@ -15,7 +15,7 @@ div{
     width: 400px;
 }
 
-p1{
+#class>p1{
     font-size: 80%;
     color: #aaa;
 }
@@ -35,6 +35,7 @@ div>section{
     font-weight: bold;
     
 }
+
 div>section>input[type=text]{
     width: 100%;
     height: 40px;
@@ -46,7 +47,9 @@ div>section>input[type=text]{
     /* padding-right: 12px; */
 }
 
-#email{text-align: right;
+#email{
+    text-align: right;
+    margin-right : 5px;
 }
 
 div>section>select{
@@ -72,12 +75,12 @@ div>section>input[type=submit]{
     background-color: #03c75a;
     color: white;
     font-weight: bold;
-    margin-bottom: 35px;
-    margin-top: 15px;
+    /* margin-bottom: 15px; */
+    margin-top: 10px;
 }
 
 #ymd{
-    width: 129.3px;
+    width: 127.5px;
     display: inline-block;
 }
 
@@ -86,19 +89,26 @@ div>section>input[type=button]{
     height: 40px;
     background-color: #03c75a;
     color: white;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     display: inline-block;
 }
 
 #protectnum{
-    width : 67.2%;
+    width : 66.5%;
     display: inline-block;
     margin-right: 5px;
 }
 
+#protectbutton{
+    width: 30%;
+    display :inline-block;
+    margin-bottom: 20px;
+}
+
 footer{
     text-align: center;
-    font-size: 10.9px;
+    font-size: 10.8px;
+
 }
 
 footer>ul{
@@ -107,7 +117,7 @@ footer>ul{
 }
 
 footer>ul>li{
-    margin-left: 5px;
+    margin-left: 4px;
     float:left ;
 }
 
@@ -123,14 +133,15 @@ footer>ul>li:hover{
 .footer2{
     font-size: 12px;
     color:rgb(134, 130, 130);
+    margin-bottom: 30px;
 }
 .naverlogo2{
     width: 50px;
-    height: px;
     margin-right: 10px;
 }
 
 .footer2>p{
     font-weight: bold;
     display: inline-block;
+    
 }
