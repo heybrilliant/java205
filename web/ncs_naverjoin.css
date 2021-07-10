@@ -15,7 +15,7 @@ div{
     width: 400px;
 }
 
-#class>p1{
+.p1{
     font-size: 80%;
     color: #aaa;
 }
@@ -43,7 +43,7 @@ div>section>input[type=text]{
     margin-bottom: 10px;
     border : 1px solid #ccc;
     color: #aaa;
-    
+    padding-left: 10px;    
     /* padding-right: 12px; */
 }
 
@@ -75,8 +75,7 @@ div>section>input[type=submit]{
     background-color: #03c75a;
     color: white;
     font-weight: bold;
-    /* margin-bottom: 15px; */
-    margin-top: 10px;
+    margin-bottom: 15px;
 }
 
 #ymd{
@@ -102,13 +101,12 @@ div>section>input[type=button]{
 #protectbutton{
     width: 30%;
     display :inline-block;
-    margin-bottom: 20px;
 }
 
 footer{
     text-align: center;
     font-size: 10.8px;
-
+    margin-top: 20px;
 }
 
 footer>ul{
@@ -130,17 +128,18 @@ footer>ul>li:hover{
     font-weight: bold;
 }
 
-.footer2{
+div>.footer2{
     font-size: 12px;
     color:rgb(134, 130, 130);
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
+
 .naverlogo2{
     width: 50px;
     margin-right: 10px;
 }
 
-.footer2>p{
+div>footer2>p{
     font-weight: bold;
     display: inline-block;
     
