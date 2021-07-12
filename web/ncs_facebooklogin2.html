@@ -24,81 +24,94 @@
     </span>
 
     <!-- section시작:로그인박스 -->
-    <div class=loginbox>
-        <section>
-            <input type="text" value="이메일 또는 전화번호">
-            <br>
-            <input type="text" value="비밀번호">
-            <br>
-            <input type="submit" value="로그인">
-            <!-- 로그인 박스 = 파란색 둥글린 버튼 hover시 약간 짙게 -->
-            <br>
-            <p>비밀번호를 잊으셨나요?</p><br><!-- hover시 밑줄 -->
-            <hr>
-            <button>새 계정 만들기</button>
-        </section>
+    <div class=login_wrap>
+        <div class=loginbox>
+            <section>
+                <input type="text" value="이메일 또는 전화번호">
+                <br>
+                <input type="text" value="비밀번호">
+                <br>
+                <input type="submit" value="로그인">
+                <!-- 로그인 박스 = 파란색 둥글린 버튼 hover시 약간 짙게 -->
+                <br>
+                <p>비밀번호를 잊으셨나요?</p><br><!-- hover시 밑줄 -->
+                <hr>
+                <button>새 계정 만들기</button>
+            </section>
+        </div>
         <p>유명인, 밴드, 비즈니스를 위한
-            <p2>페이지 만들기</p2>
+            <p2 class=p2>페이지 만들기</p2>
         </p>
     </div>
-    <!-- footer 시작 -->
+    <!-- footer 시작-->
+    <footer>
+        <div class="footer_wrap">
+            <!-- footer1 파트 시작 -->
+            <div id="footer1">
+                <ul>
+                    <li><a href="#">한국어</a></li>
+                    <li><a href="#">English(US)</a></li>
+                    <li><a href="#">Tiếng Việt</a></li>
+                    <li><a href="#">Bahasa Indonesia</a></li>
+                    <li><a href="#">ภาษาไทย</a></li>
+                    <li><a href="#">Español</a></li>
+                    <li><a href="#">中文(简体)</a></li>
+                    <li><a href="#">日本語</a></li>
+                    <li><a href="#">Português (Brasil)</a></li>
+                    <li><a href="#">Français (France)</a></li>
+                    <li><a href="#">Deutsch</a></li>
+                </ul>
+                <input type=button id="plusbtn" value="+" style='cursor:pointer'></input>
+            </div>
+            <!-- footer1 파트 끝 -->
 
-    <footer class="bottom">
-        <div>
-            <ul>
-                <li>한국어</li>
-                <li>English (US)</li>
-                <li>Tiếng Việt</li>
-                <li>Bahasa Indonesia</li>
-                <li>ภาษาไทย</li>
-                <li>Español</li>
-                <li>中文(简体)</li>
-                <li>日本語</li>
-                <li>Português (Brasil)</li>
-                <li>Français (France)</li>
-                <li> Deutsch</li>
-                <li>+버튼</li>
-            </ul>
-            <ul>
-                <li>가입하기</li>
-                <li>로그인</li>
-                <li>Messenger
-                <li>Facebook Lite
-                <li>
-                <li>Watch
-                    사람
-                    페이지
-                    페이지 카테고리
-                    장소
-                    게임
-                    위치
-                    Marketplace
-                    Facebook Pay
-                    그룹
-                    채용 정보
-                    Oculus
-                    Portal
-                    Instagram
-                    지역
-                    기부 캠페인
-                    서비스
-                    투표 정보 센터
-                    정보
-                    광고 만들기
-                    페이지 만들기
-                    개발자
-                    채용 정보
-                    개인정보처리방침
-                    쿠키
-                    AdChoices
-                    이용 약관
-                    고객 센터
-            </ul>
-            <br>
-            Facebook ©2021
+            <!-- footer2 -->
+            <div id="footer2">
+                <ul>
+                    <li><a href="#">가입하기</a></li>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">Messenger</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">LiteWatch</a></li>
+                    <li><a href="#">사람</a></li>
+                    <li><a href="#">페이지</a></li>
+                    <li><a href="#">페이지 카테고리</a></li>
+                    <li><a href="#">장소</a></li>
+                    <li><a href="#">게임</a></li>
+                    <li><a href="#">위치</a></li>
+                    <li><a href="#">Marketplace</a></li>
+                    <li><a href="#">Facebook Pay</a></li>
+                    <li><a href="#">그룹</a></li>
+                    <li><a href="#">채용 정보</a></li>
+                    <li><a href="#">Oculus</a></li>
+                    <li><a href="#">Portal</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">지역</a></li>
+                    <li><a href="#">기부 캠페인</a></li>
+                    <li><a href="#">서비스</a></li>
+                    <li><a href="#">투표 정보 센터</a></li>
+                    <li><a href="#">정보</a></li>
+                    <li><a href="#">광고 만들기</a></li>
+                    <li><a href="#">페이지 만들기</a></li>
+                    <li><a href="#">개발자</a></li>
+                    <li><a href="#">채용 정보</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">쿠키</a></li>
+                    <li><a href="#">AdChoices</a></li>
+                    <li><a href="#">이용 약관</a></li>
+                    <li><a href="#">고객 센터</a></li>
+                </ul>
+            </div>
+            <!-- footer2 끝 -->
+
+            <!-- copyright 영역-->
+            <div class="copyright">
+                <p>Facebook © 2021</p>
+            </div>
+        </div>
+        <!-- 전체 푸터영역 끝 -->
     </footer>
-    <!-- footer 끝 -->
-    </div>
+    <!-- footer 끝-->
 </body>
 
 </html>
