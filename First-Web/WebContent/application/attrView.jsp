@@ -24,7 +24,7 @@
 	}
 %>
 
-	<h3><a href="remAttr.jsp>속성 삭제</a></h3>
+	<h3><a href="remAttr.jsp">속성 삭제</a></h3>
 
 </body>
 </html>
