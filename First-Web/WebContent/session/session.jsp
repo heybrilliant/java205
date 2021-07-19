@@ -4,7 +4,6 @@
 	session.setAttribute("userName","신은경");
 %>    
     
-    
 <!DOCTYPE html>
 <html>
 <head>
