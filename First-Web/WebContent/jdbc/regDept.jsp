@@ -4,7 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <% 
-	// 1. 사용자가 입력한 데이터를 받고 
+	// 1. 사용자가 입력한 데이터를 받고  -> 처리 -> 결과를 속성에 저장 -> view 지정
 	
 	// 입력 데이터의 한글처리 (필수!)
 	request.setCharacterEncoding("utf-8");
@@ -18,13 +18,22 @@
 	// 2. DB 처리 : insert
 
 	// 데이터베이스 드라이버 로드
-	Class.forName("com.mysql.cj.jdbc.Driver");
+	// 서블릿 클래스 Loader에서 드라이버 로드 
+	// Class.forName("com.mysql.cj.jdbc.Driver"); // mysql 연결
 	
 	
 	try{
 	// 커넥션 연결
 	Connection conn = null;
 	PreparedStatement pstmt = null;
+	
+	try{
+		conn = ConnectionProvider.getConnection();
+		
+		resultCnt = dao.insertDept(conn, new Dept(Integer.parseInt(deptno, dname, loc)));
+	} catch (Exception e) {
+		
+	}
 	
 	String jdbcUrl = "jdbc:mysql://localhost:3306/project?serverTimezone=UTC";
 	String user = "bit";
