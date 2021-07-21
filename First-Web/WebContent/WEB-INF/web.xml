@@ -33,6 +33,14 @@
   	<location>/error/errorTypeNull.jsp</location>
   </error-page>
   
+  <!-- 서블릿 등록 -->
+  <servlet>
+  <servlet-name>Loader</servlet-name>
+  <servlet-class>jdbc.util.Loader</servlet-class>
+  <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  
   
   
   <!-- 서블릿 등록  -->
