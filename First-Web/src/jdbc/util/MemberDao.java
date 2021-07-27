@@ -21,7 +21,6 @@ public Member selectByIdPw(Connection conn, String id, String pw) {
 		pstmt = conn.preparedStatement(sql);
 		pstmt.setString(1,id);
 		pstmt.setString(2,pw);
-		rs = pstmt.executeQuery();
 	
 		if(rs.next()) {
 			member = new Member();
