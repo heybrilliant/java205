@@ -16,7 +16,7 @@
 		$('#btn').click(function(){
 			$.ajax({
 				url:'parameter.jsp',
-				type : 'get', // http의 method : get, post, put, delete
+				type : 'post', // http의 method : get, post, put, delete
 				data : {
 					pname : $('#pname').val(),
 					price : $('#price').val()
@@ -27,7 +27,7 @@
 				} 
 				});
 			});
-			}
+			
 		});
 	
 

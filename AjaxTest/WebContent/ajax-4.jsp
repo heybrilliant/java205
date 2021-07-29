@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,19 +12,20 @@
 
 	$(document).ready(function(){
 		// alert("ready"); -> test
+			
+		 $.get('data.html',function(data){
+			$('body').html(data);
+		}); 
 		
-		$.ajax('data.html', {
-			success: function(data){
-				$('body').append(data);
-			}
-		});
+		$.post('data.html',function(data){
+			$('body').html(data);
+		}); 	
+		
 	});
-
 
 
 </script>
 </head>
 <body>
-	ajax-1.jsp
 </body>
 </html>

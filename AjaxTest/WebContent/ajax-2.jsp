@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,27 +12,20 @@
 
 	$(document).ready(function(){
 		// alert("ready"); -> test
-			
-		/* $.get('data',function(data){
-			$('body').html(data);
-		}); */
 		
-		/* $.post('data',function(data){
-			$('body').html(data);
-		}); */	
-		
-		$.getJSON('data.json', function(data){
-			$.each(data, function(index, value){
-				var html = '<h3>이름 : '+ value.name +', 가격 : '+ value.price +'</h3>';
-				$('body').append(html);
-			});
-		});
-		
+		$.ajax({ //$.ajax({}) -> ajax 전체 속성을 객체로 표현해줌
+			url : 'data.html',
+			success : function(data){
+				$('body').html(data);
+			}
+		}); 
 	});
+
 
 
 </script>
 </head>
 <body>
+	ajax-1.jsp
 </body>
 </html>

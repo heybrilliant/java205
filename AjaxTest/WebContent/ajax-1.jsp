@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,20 +11,18 @@
 <script>
 
 	$(document).ready(function(){
-		// alert("ready"); -> test		
-
-		$.getJSON('data.json', function(data){
-			$.each(data, function(index, value){
-				var html = '<h3>이름 : '+ value.name +', 가격 : '+ value.price +'</h3>';
-				$('body').append(html);
-			});
-		});
+		// alert("ready"); -> test
 		
+		$.ajax('data.html',{ 
+			success :function(data){
+				$('body').append(data);
+			}
+		});
 	});
-
 
 </script>
 </head>
 <body>
+	ajax-1.jsp
 </body>
 </html>

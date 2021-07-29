@@ -39,7 +39,7 @@
 	<h1>제품 등록</h1>
 	<hr>
 	<form id="myform">
-	제품 이름 :	<input type="text" id="pname" name="pname">	<br> 
+	제품 이름 :	<input type="text" id="pname" name="pname">	<br> <!-- form을 받기 위해선 name 속성을 써줘야함 --> 
 	제품 가격 :	<input type="number" id="price" name="price"> <br>
 	<input id="btn" type="submit">
 	</form>
