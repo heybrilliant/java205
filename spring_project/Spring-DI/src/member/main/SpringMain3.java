@@ -6,10 +6,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 import member.domain.RegRequest;
-import member.service.ChangePasswordService;
-import member.service.MemberRegService;
+import member.service.ChangePasswordService2;
+import member.service.MemberRegService2;
 
-public class SpringMain1 {
+public class SpringMain3 {
 
 	static ApplicationContext ctx;
 	
@@ -20,7 +20,9 @@ public class SpringMain1 {
 		
 		//ctx = new GenericXmlApplicationContext("classpath:appCtx1.xml"); 생성자 방식 주입
 		//ctx = new GenericXmlApplicationContext("classpath:appCtx2.xml"); // 프로퍼티 방식
-		ctx = new GenericXmlApplicationContext("classpath:appCtx3.xml");
+		//ctx = new GenericXmlApplicationContext("classpath:appCtx3.xml");
+		ctx = new GenericXmlApplicationContext("classpath:appCtx5.xml");
+		
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -54,8 +56,8 @@ public class SpringMain1 {
 	
 		// ChangePasswordService service = new ChangePasswordService(dao); -> 조립기 이후 필요하지 않음 
 		// ChangePasswordService service = assembler.getPasswordService();
-		ChangePasswordService service = ctx.getBean("changePwService", ChangePasswordService.class);
-		
+		// ChangePasswordService service = ctx.getBean("changePwService", ChangePasswordService.class);
+		ChangePasswordService2 service = ctx.getBean("changePwService", ChangePasswordService2.class);
 		
 		try {
 			service.changePassword(values[1], values[2], values[3]);
@@ -74,7 +76,8 @@ public class SpringMain1 {
 		
 		// MemberRegService service = new MemberRegService(dao); -> 조립기 이후 필요하지 않음
 		// MemberRegService service = assembler.getRegService();
-		MemberRegService service = ctx.getBean("regService", MemberRegService.class);
+		// MemberRegService service = ctx.getBean("regService", MemberRegService.class);
+		MemberRegService2 service = ctx.getBean("regService", MemberRegService2.class);
 		
 		
 		RegRequest request = new RegRequest();
