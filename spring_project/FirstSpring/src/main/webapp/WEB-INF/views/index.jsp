@@ -15,6 +15,7 @@
 		<li><a href="<c:url value="/hello"/>">/hello</a></li>
 		<li><a href="<c:url value="/member/loginform"/>">/member/loginForm</a></li>
 		<li><a href="<c:url value="/member/regform"/>">/member/regForm</a></li>
+		<li><a href="<c:url value="/order/order"/>">/order/order</a></li>
 	</ul>
 </body>
 </html>

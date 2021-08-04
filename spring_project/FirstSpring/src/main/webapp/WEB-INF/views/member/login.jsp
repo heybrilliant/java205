@@ -13,32 +13,20 @@
 </head>
 <body>
 
-	<h1>LoginForm</h1>
+	<h1>Login Request Data</h1>
 	<hr>  <!-- /web/member/login.jsp -->
-	<Form method="post"> <!-- action ="#" 액션은 자기자신과 같다 -->
-
 	<%-- action="<c:url value="/member/Login.jsp"/>">	 --%>
 	<!-- /web/member/mypage/mypage.jsp ->mypage.jsp에 filter생성  -->
 		<table>
 			<tr>
 				<td>아이디</td>
-				<td><input type="text" name= "id">
-				</td>
+				<td>${id}, ${uid}, ${loginReq.id}</td>
 			</tr>
 			<tr>	
 				<td>비밀번호</td>
-				<td><input type="password" name= "pw">
-				</td>
+				<td>${pw}, ${upw}, ${loginReq.pw}</td>
 			</tr>	
-			<tr>
-				<td></td>
-				<td><input type="submit">
-			</tr>	
-					
 		</table>
 	
-	</Form>
-
-
 </body>
 </html>
