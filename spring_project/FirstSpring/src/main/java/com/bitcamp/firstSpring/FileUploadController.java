@@ -66,6 +66,14 @@ public class FileUploadController {
 		String sname = request.getParameter("sname");
 		MultipartFile report = request.getFile("report");
 		
+		System.out.println("학번 : " + sno);
+		System.out.println("이름 : " + sname);
+		System.out.println("파일 : " + report.getOriginalFilename());
+
+		model.addAttribute("sno", sno);
+		model.addAttribute("sname", sname);
+		model.addAttribute("reportfile", report.getOriginalFilename());
+		
 		saveFile(request, report);
 		
 		return "upload/upload";
@@ -78,7 +86,7 @@ public class FileUploadController {
 			Model model,
 			HttpServletRequest request
 			
-			) {
+			) throws IllegalStateException, IOException {
 		
 		System.out.println("학번 : "+ report.getSno());
 		System.out.println("이름 : "+ report.getSname());
@@ -89,7 +97,6 @@ public class FileUploadController {
 		model.addAttribute("reportfile", report.getReport().getOriginalFilename());
 		
 		saveFile(request, report.getReport());
-		
 		
 		return "upload/upload";
 		
