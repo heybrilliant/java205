@@ -38,10 +38,4 @@ public class Report {
 		this.report = report;
 	}
 	
-	public Report() {
-		
-	}
-	
-	
-	
 }
