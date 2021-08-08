@@ -1,4 +1,4 @@
-package jdbc.util;
+package jdbc;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;

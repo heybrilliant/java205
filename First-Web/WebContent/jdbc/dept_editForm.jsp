@@ -1,5 +1,5 @@
 <%@page import="java.sql.SQLException"%>
-<%@page import="jdbc.util.ConnectionProvider"%>
+<%@page import="jdbc.ConnectionProvider"%>
 <%@page import="dept.domain.DeptDao"%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.PreparedStatement"%>

@@ -1,4 +1,4 @@
-package jdbc.util;
+package jdbc;
 
 import java.util.StringTokenizer;
 

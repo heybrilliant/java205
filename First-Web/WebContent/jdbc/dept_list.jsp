@@ -1,5 +1,5 @@
-<%@page import="jdbc.util.ConnectionProvider"%>
-<%@page import="jdbc.util.jdbcUtil"%>
+<%@page import="jdbc.ConnectionProvider"%>
+<%@page import="jdbc.jdbcUtil"%>
 <%@page import="java.sql.SQLException"%>
 <%@page import="dept.domain.DeptDao"%>
 <%@page import="dept.domain.Dept"%>
