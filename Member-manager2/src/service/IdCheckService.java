@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 import dao.MemberDao;
-import jdbc.util.ConnectionProvider;
+import jdbc.ConnectionProvider;
 
 public class IdCheckService {
 

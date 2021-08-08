@@ -1,4 +1,4 @@
-<%@page import="jdbc.util.jdbcUtil"%>
+<%@page import="jdbc.jdbcUtil"%>
 <%@page import="java.sql.SQLException"%>
 <%@page import="dao.MemberDao"%>
 <%@page import="util.ConnectionProvider"%>
