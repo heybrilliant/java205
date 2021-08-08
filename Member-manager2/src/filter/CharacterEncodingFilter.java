@@ -16,11 +16,11 @@ import org.omg.CORBA.PRIVATE_MEMBER;
 /**
  * Servlet Filter implementation class CharacterEncodingFilter
  */
-@WebFilter(dispatcherTypes = {DispatcherType.REQUEST }
-					, urlPatterns = { 
-							"/*",
-							"/request/*"
-							}, servletNames = { "Loader" })
+//@WebFilter(dispatcherTypes = {DispatcherType.REQUEST }
+//					, urlPatterns = { 
+//							"/*",
+//							"/request/*"
+//							}, servletNames = { "Loader" })
 public class CharacterEncodingFilter implements Filter {
 	
 	private String encoding;
@@ -28,9 +28,9 @@ public class CharacterEncodingFilter implements Filter {
     /**
      * Default constructor. 
      */
-    public CharacterEncodingFilter() {
-    	String encoding;
-    }
+//    public CharacterEncodingFilter() {
+//    	String encoding;
+//    }
 
 	/**
 	 * @see Filter#destroy()
@@ -42,7 +42,7 @@ public class CharacterEncodingFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
 		HttpServletRequest HttpRequest = (HttpServletRequest) request;
-		HttpRequest.setCharacterEncoding("utf-8");
+		HttpRequest.setCharacterEncoding(encoding);
 		
 		chain.doFilter(request, response);
 		
