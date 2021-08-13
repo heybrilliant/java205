@@ -64,12 +64,14 @@ public class Member {
 	}
 
 	public Timestamp getRegdate() {
-		return regdate;
+		return new Timestamp(regdate. getTime()-(1000*60*60*9));
+		//return regdate;
 	}
 
 	public void setRegdate(Timestamp regdate) {
 		this.regdate = regdate;
 	}
+	
 	
 	// java.sql.TimeStamp -> java.util.Date
 	public Date getDate() {
