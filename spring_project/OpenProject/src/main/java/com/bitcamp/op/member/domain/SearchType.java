@@ -16,6 +16,36 @@ public class SearchType {
 	public SearchType() {
 		this.p = 1;
 	}
+
+	public int getP() {
+		return p;
+	}
+
+	public void setP(int p) {
+		this.p = p;
+	}
+
+	public String getSearchType() {
+		return searchType;
+	}
+
+	public void setSearchType(String searchType) {
+		this.searchType = searchType;
+	}
+
+	public String getKeyword() {
+		return keyword;
+	}
+
+	public void setKeyword(String keyword) {
+		this.keyword = keyword;
+	}
+
+	// 데이터 확인용
+	@Override
+	public String toString() {
+		return "SearchType [p=" + p + ", searchType=" + searchType + ", keyword=" + keyword + "]";
+	}
 	
 	
 }

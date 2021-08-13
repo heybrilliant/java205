@@ -21,13 +21,15 @@ public class MemberListController {
 	public String getList(
 			SearchType searchType,
 			Model model
-			
 			) {
 
+		System.out.println(searchType);
+		
 		List<Member> list = null;
 		
-		if(searchType.getKeyword() != null && searchType.getKeyword().trim().) {
+		if(searchType.getKeyword() != null && searchType.getKeyword().trim().length()>0) {
 			list = listService.getMemberList(searchType);
+			System.out.println(1);
 		} else {
 			list = listService.getMemberList();
 		}

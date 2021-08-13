@@ -27,9 +27,15 @@
 			<form>
 			 검색타입 
 			 <select name="searchType">
+			 	<option id="id">아이디</option>
+			 	<option id="name">이름</option>
+			 	<option id="both">아이디+이름</option>
+			 </select>
+			 검색 키워드<input type="text" name="keyword">
+			 <input type="submit" value="검색">
 			</form>
-
-
+		<hr>
+	
 
 		<table class="border">
 			<tr>
