@@ -10,10 +10,7 @@
 <%@ include file="/WEB-INF/views/frame/metaheader.jsp" %>
 
 <style>
-	#loadingimg{
-		height : 25px;
-	}
-	
+
 	.display_none{
 		display : none;
 	}
@@ -24,6 +21,10 @@
 
 	.color_red {
 		color: red;
+	}
+	
+		#loadingimg{
+		height : 25px;
 	}
 	
 </style>
@@ -128,7 +129,73 @@
 			</table>
 		</form>
 	
+			<div>
+			ajax로 회원 가입 <input type="button" value="회원가입" id="btnReg1">
+			</div>
+			<div>
+			ajax로 Json 전송 회원 가입 <input type="button" value="회원가입" id="btnReg2">
+			</div>
+	
 	</div>
+	
+	<script>
+		$(document).ready(function() {
+			$('#btnReg1').click(function() {
+				var photoFile = $('#photo');
+				var file1 = photoFile[0].files[0];
+				//console.log(file1);
+				var formData = new FormData();
+				formData.append("memberid", $('#memberid').val());
+				formData.append("password", $('#password').val());
+				formData.append("membername", $('#membername').val());
+				formData.append("photo", file1);
+				console.log(formData);
+				$.ajax({
+					url : '/op/members/reg1',
+					type : 'post',
+					data : formData,
+					enctype : 'multipart/form-data',
+					processData : false,
+					contentType : false,
+					cache : false,
+					success : function(data) {
+						console.log(data);
+						if(data==1){
+							alert("회원가입 되었습니다.");
+						}
+					}
+				});
+			});
+			
+			
+			$('#btnReg2').click(function() {
+				var userid = $('#memberid').val();
+				var pw = $('#password').val();
+				var username = $('#membername').val();
+				var member = {
+						memberid: userid,
+						password: pw,
+						membername: username
+				}
+				
+				console.log(JSON.stringify(member));
+				
+				$.ajax({
+					url : '/op/members/reg2',
+					type : 'post',
+					data : JSON.stringify(member),
+					dataType : 'json',
+					contentType : 'application/json',
+					success : function(data) {
+						console.log(data);
+						if(data==1){
+							alert('회원가입이 되었습니다.');
+						}
+					}
+				});
+			});
+		});
+	</script>
 
 
 </body>
