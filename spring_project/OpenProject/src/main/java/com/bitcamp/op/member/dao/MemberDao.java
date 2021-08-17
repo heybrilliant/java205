@@ -16,7 +16,7 @@ import com.bitcamp.op.member.domain.Member;
 
 // 빈즈 자동 추가
 @Repository
-public class @Autowired {
+public class MemberDao {
 
 	  public int insertMember(Connection conn, Member member) throws SQLException {
 	  
