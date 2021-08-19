@@ -65,7 +65,7 @@
 			
 			
 			$.ajax({
-				url :'http://localhost:8080/op/member/idCheck',
+				url :'http://3.38.104.221:8080/op/member/idCheck',
 				type : 'post',
 				data : {
 					mid : $(this).val()
@@ -117,7 +117,7 @@
 					console.log(formData);
 	
 					$.ajax({
-						url : '/op/members/reg1',
+						url : 'http://3.38.104.221:8080/op/members/reg1',
 						type : 'post',
 						data : formData,
 						enctype : 'multipart/form-data',
@@ -159,7 +159,7 @@
 	
 	function memberList(){
 		$.ajax({
-			url : 'http://localhost:8080/op/members',
+			url : 'http://3.38.104.221:8080/op/members',
 			type : 'GET',
 			success : function(data){
 				console.log(data);
@@ -170,7 +170,7 @@
 					html += 'idx : ' +  item.idx + '<br>';
 					html += '아이디 : ' +  item.memberid + '<br>';
 					html += '이름 : ' +  item.membername + '<br>';
-					html += '사진 : <img src="http://localhost:8080/op/uploadfile/' +  item.memberphoto + '"><br>';
+					html += '사진 : <img src="http://3.38.104.221:8080/op/uploadfile/' +  item.memberphoto + '"><br>';
 					html += '가입일 : ' +  item.regdate + '<br>';
 					html += '</div>';
 					
