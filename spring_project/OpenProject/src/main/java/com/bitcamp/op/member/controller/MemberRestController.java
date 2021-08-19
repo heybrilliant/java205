@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -48,6 +49,7 @@ public class MemberRestController {
 	// @PutMapping
 	// @PostMapping
 	@GetMapping("/members")
+	@CrossOrigin  // 요청이 어디서 들어와도 상관없음
 	public List<Member> getMembers(){
 		return restService.getMembers();
 	}
