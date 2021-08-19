@@ -10,7 +10,7 @@
 	<bean id="datasource"
 		class="com.zaxxer.hikari.HikariDataSource"
 		p:driverClassName="com.mysql.cj.jdbc.Driver"
-		p:jdbcUrl="jdbc:mysql://loacalhost:3306/project?serveTimezone=UTC"
+		p:jdbcUrl="jdbc:mysql://mysql205.cvihyajemdwr.us-east-2.rds.amazonaws.com:3306/project?serveTimezone=UTC"
 		p:username="bit"
 		p:password="bit"	
 	>
