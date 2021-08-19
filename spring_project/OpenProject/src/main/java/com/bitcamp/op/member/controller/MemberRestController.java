@@ -35,6 +35,7 @@ public class MemberRestController {
 	
 	
 	@RequestMapping("/members/{id}")
+	@CrossOrigin
 	public Member getMember(
 			@PathVariable("id") int idx
 			) {
@@ -61,6 +62,7 @@ public class MemberRestController {
 	
 	
 	@PostMapping("/members/reg1")
+	@CrossOrigin
 	public String regMember1(
 			MemberRegRequest regRequest,
 			HttpServletRequest request
@@ -70,6 +72,7 @@ public class MemberRestController {
 	}
 	
 	@PostMapping("/members/reg2")
+	@CrossOrigin
 	public String regMember2(
 			@RequestBody MemberRegRequest regRequest,
 			HttpServletRequest request
