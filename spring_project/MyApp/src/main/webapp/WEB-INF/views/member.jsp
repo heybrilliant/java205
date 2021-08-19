@@ -201,7 +201,7 @@
 					<td><input type="text" name="memberid" id="memberid">
 						<span id="msg" class="display_none"></span>
 						<img id="loadingimg" class="display_none" alt="loading" 
-						src="http://localhost:8080/op/images/loading.gif"> 
+						src="http://3.38.104.221:8080/op/images/loading.gif"> 
 					</td>
 				</tr>
 				<tr>
