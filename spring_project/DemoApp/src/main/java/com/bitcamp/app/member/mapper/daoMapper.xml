@@ -32,10 +32,14 @@
 	</select>
 
 	<select id="selectByIdx"
-			resultType="com.bitcamp.app.member.domain.Member"
-	>
-		select * from member where idx=#{idx}	
+		resultType="com.bitcamp.app.member.domain.Member">
+		select * from member
+		where idx=#{idx}
 	</select>
+
+
+
+
 
 
 	<insert id="insertMember"
@@ -43,15 +47,18 @@
 		useGeneratedKeys="true" keyProperty="idx">
 
 		insert into member (memberid, password, membername, memberphoto)
-		values(#{memberid}, #{password}, #{membername}, #{memberphoto})
+		values
+		(#{memberid}, #{password}, #{membername}, #{memberphoto})
 
 	</insert>
 
 	<update id="updateMember"
 		parameterType="com.bitcamp.app.member.domain.Member">
 		update member
-		set membername = #{membername}, password() = #{password}
+		set
+		membername = #{membername}, password = #{password}
 		where idx=#{idx}
+
 	</update>
 
 	<delete id="deleteMember">
@@ -59,16 +66,19 @@
 	</delete>
 
 	<!-- 전체 회원의 리스트 -->
-	 <select id="selectAll" resultType="com.bitcamp.app.member.domain.Member" 
-		> 
-	<select id="selectAll" resultMap="MemberListResult">
-		select * from member order by idx
+	<!-- <select id="selectAll" resultType="com.bitcamp.op.member.domain.Member" 
+		> -->
+	<select id="selectAll" resultMap="memberListResult">
+		select *
+		from member order by idx
 	</select>
 
 	<!-- 페이징 처리가 가능한 회원 리스트 -->
 	<select id="selectList"
 		resultType="com.bitcamp.app.member.domain.Member">
 		select * from member
+
+
 		order by memberid limit #{param1}, #{param2}
 	</select>
 
@@ -81,18 +91,18 @@
 	<!-- 검색을 통한 회원 리스트 -->
 	<select id="selectMember"
 		parameterType="com.bitcamp.app.member.domain.SearchType"
-		resultType="com.bitcamp.app.member.domain.Member"
-		>
+		resultType="com.bitcamp.app.member.domain.Member">
+
 		select * from member
 
 		<where>
 			<if test="searchType == 'id'">
-				<!-- memberid like concat('%', #{keyword} ,'%') -->
+				<!-- memberid like concat('%', #{keyword},'%') -->
 				<include refid="searchId" />
 			</if>
 
 			<if test="searchType == 'name'">
-				<!-- membername like concat('%', #{keyword} ,'%') -->
+				<!-- membername like concat('%', #{keyword},'%') -->
 				<include refid="searchName" />
 			</if>
 
@@ -100,11 +110,13 @@
 				<include refid="searchId" />
 				<include refid="searchName" />
 			</if>
-
 		</where>
+
+
 	</select>
 
-	<!-- 마이바티스 안에서 처리할때 sql문은 concat없이 쓰면 문제가 생김 ex)'%#{keyword}%' 이런식으로 쓰면 오류남 -->
+	<!-- 마이바티스 안에서 처리할때 sql문은 concat없이 쓰면 문제가 생김 ex)'%#{keyword}%' 이런식으로 쓰면 
+		오류남 -->
 	<sql id="searchId">
 		or memberid like concat('%', #{keyword} ,'%')
 	</sql>
